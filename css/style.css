@@ -477,7 +477,7 @@ h1, h2, h3, h4 {
 }
 
 .service-features li::before {
-    content: '\\2713';
+    content: '✓';
     position: absolute;
     left: 0;
     color: var(--color-primary);
