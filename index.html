@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Themis — Préparation LSAT et révision de dossier d'admission | LSAT prep and application review." />
+  <title>Themis — LSAT prep and application review | Préparation LSAT et révision dossier d'admission</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="logo" href="#top">
+        <span class="logo-mark">&#9878;</span>
+        <span class="logo-text">
+          <span class="logo-name">Themis</span>
+          <span class="logo-tagline" data-i18n="tagline">Préparation LSAT et révision dossier d'admission</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <a href="#accueil" data-i18n="nav_home">Accueil</a>
+        <a href="#apropos" data-i18n="nav_about">À propos</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#tarifs" data-i18n="nav_pricing">Tarifs</a>
+        <a href="#rendezvous" data-i18n="nav_booking">Rendez-vous</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn is-active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Accueil -->
+    <section class="hero" id="accueil">
+      <div class="container hero-inner">
+        <p class="eyebrow" data-i18n="hero_eyebrow">LSAT prep and application review</p>
+        <h1 data-i18n="hero_title">Réussissez votre admission en droit avec Themis</h1>
+        <p class="hero-sub" data-i18n="hero_sub">Préparation au LSAT, révision de CV et de personal statement — un accompagnement personnalisé pour donner à votre candidature les meilleures chances.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#rendezvous" data-i18n="hero_cta_primary">Prendre rendez-vous</a>
+          <a class="btn btn-ghost" href="#tarifs" data-i18n="hero_cta_secondary">Voir les tarifs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section" id="apropos">
+      <div class="container about-inner">
+        <div class="about-media" aria-hidden="true">
+          <img src="images/about.svg" alt="" />
+        </div>
+        <div class="about-text">
+          <p class="eyebrow" data-i18n="about_eyebrow">À propos</p>
+          <h2 data-i18n="about_title">Un accompagnement dédié à votre réussite</h2>
+          <p data-i18n="about_p1">Themis accompagne les candidat·e·s aux études de droit à chaque étape de leur parcours d'admission : préparation ciblée au LSAT, structuration du personal statement et optimisation du CV.</p>
+          <p data-i18n="about_p2">Chaque suivi est individualisé et fondé sur une compréhension fine des attentes des comités d'admission, afin de mettre en valeur votre profil et votre potentiel.</p>
+          <ul class="about-points">
+            <li data-i18n="about_point1">Préparation LSAT structurée et stratégique</li>
+            <li data-i18n="about_point2">Révision approfondie du personal statement</li>
+            <li data-i18n="about_point3">Optimisation du CV et du dossier</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="services_eyebrow">Services</p>
+          <h2 data-i18n="services_title">Nos services</h2>
+          <p class="section-lead" data-i18n="services_lead">Un accompagnement complet, de la préparation à l'examen jusqu'à la soumission de votre dossier.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="card-icon">&#128218;</span>
+            <h3 data-i18n="service1_title">Préparation LSAT</h3>
+            <p data-i18n="service1_desc">Tutorat personnalisé pour maîtriser la logique, la compréhension de lecture et le raisonnement analytique.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">&#9997;</span>
+            <h3 data-i18n="service2_title">Personal Statement</h3>
+            <p data-i18n="service2_desc">Brainstorming, structuration et révision pour un essai personnel percutant et authentique.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon">&#128188;</span>
+            <h3 data-i18n="service3_title">Révision de CV</h3>
+            <p data-i18n="service3_desc">Optimisation de votre CV pour valoriser vos expériences et votre parcours académique.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section class="section" id="tarifs">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="pricing_eyebrow">Tarifs</p>
+          <h2 data-i18n="pricing_title">Grille tarifaire</h2>
+          <p class="section-lead" data-i18n="pricing_lead">Des formules flexibles adaptées à vos besoins et à votre budget.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="price-card price-card--free">
+            <span class="price-badge" data-i18n="pricing_badge_free">Gratuit</span>
+            <h3 data-i18n="price1_title">Appel-consultation de 15 minutes</h3>
+            <p class="price-amount"><span data-i18n="price1_amount">Gratuit</span></p>
+            <p class="price-desc" data-i18n="price1_desc">Un premier échange pour cerner vos besoins et objectifs.</p>
+          </article>
+
+          <article class="price-card">
+            <h3 data-i18n="price2_title">Tutorat LSAT</h3>
+            <p class="price-amount">$60<span class="price-unit" data-i18n="price2_unit">/heure</span></p>
+            <p class="price-desc" data-i18n="price2_desc">Séances de tutorat individuel adaptées à votre niveau.</p>
+          </article>
+
+          <article class="price-card">
+            <h3 data-i18n="price3_title">Rencontre de 30 minutes</h3>
+            <p class="price-amount">$35</p>
+            <p class="price-desc" data-i18n="price3_desc">Une rencontre ciblée pour discuter d'un point précis.</p>
+          </article>
+
+          <article class="price-card">
+            <h3 data-i18n="price4_title">Forfait révision</h3>
+            <p class="price-amount">$100</p>
+            <p class="price-desc" data-i18n="price4_desc">2 révisions + une rencontre de 30 minutes.</p>
+          </article>
+
+          <article class="price-card price-card--featured">
+            <span class="price-badge price-badge--popular" data-i18n="pricing_badge_popular">Populaire</span>
+            <h3 data-i18n="price5_title">Forfait brainstorming</h3>
+            <p class="price-amount">$150</p>
+            <p class="price-desc" data-i18n="price5_desc">1 séance de brainstorming (deux rencontres de 30 minutes) + 2 révisions.</p>
+          </article>
+
+          <article class="price-card price-card--featured">
+            <span class="price-badge price-badge--best" data-i18n="pricing_badge_best">Tout inclus</span>
+            <h3 data-i18n="price6_title">Forfait tout inclus</h3>
+            <p class="price-amount">$350</p>
+            <p class="price-desc" data-i18n="price6_desc">Brainstorming + préparation LSAT (5 heures) + 2 révisions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rendez-vous -->
+    <section class="section section-alt" id="rendezvous">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow" data-i18n="booking_eyebrow">Rendez-vous</p>
+          <h2 data-i18n="booking_title">Prendre rendez-vous</h2>
+          <p class="section-lead" data-i18n="booking_lead">Réservez votre créneau directement en ligne via Calendly.</p>
+        </div>
+
+        <!--
+          Calendly integration:
+          Replace CALENDLY_PLACEHOLDER below with your real Calendly link,
+          e.g. https://calendly.com/your-username/consultation
+          The widget only loads once a real https:// URL is set; until then a
+          placeholder message is shown (see script.js).
+        -->
+        <div
+          id="calendly-widget"
+          class="calendly-placeholder"
+          data-calendly-url="CALENDLY_PLACEHOLDER"
+          style="min-width:320px;"
+        >
+          <p class="calendly-placeholder-msg" data-i18n="booking_placeholder">Le calendrier en ligne sera bientôt disponible.</p>
+        </div>
+
+        <div class="booking-fallback">
+          <p data-i18n="booking_fallback">Le calendrier ne s'affiche pas ? Écrivez-nous directement :</p>
+          <a class="btn btn-primary" href="mailto:themislawprep@gmail.com">themislawprep@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-name">Themis</span>
+        <p data-i18n="footer_tagline">Préparation LSAT et révision dossier d'admission</p>
+      </div>
+      <div class="footer-contact">
+        <p data-i18n="footer_contact_label">Contact</p>
+        <a href="mailto:themislawprep@gmail.com">themislawprep@gmail.com</a>
+      </div>
+      <div class="footer-nav">
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#tarifs" data-i18n="nav_pricing">Tarifs</a>
+        <a href="#rendezvous" data-i18n="nav_booking">Rendez-vous</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Themis. <span data-i18n="footer_rights">Tous droits réservés.</span></p>
+    </div>
+  </footer>
+
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <script src="script.js"></script>
+</body>
+</html>
