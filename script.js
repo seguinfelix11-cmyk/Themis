@@ -9,7 +9,7 @@ const translations = {
     nav_pricing: "Tarifs",
     nav_booking: "Rendez-vous",
 
-    hero_eyebrow: "LSAT prep and application review",
+    hero_eyebrow: "Préparation LSAT et révision dossier d'admission",
     hero_title: "Réussissez votre admission en droit avec Themis",
     hero_sub: "Préparation au LSAT, révision de CV et de personal statement — un accompagnement personnalisé pour donner à votre candidature les meilleures chances.",
     hero_cta_primary: "Prendre rendez-vous",
@@ -72,7 +72,7 @@ const translations = {
     nav_pricing: "Pricing",
     nav_booking: "Booking",
 
-    hero_eyebrow: "Préparation LSAT et révision dossier d'admission",
+    hero_eyebrow: "LSAT prep and application review",
     hero_title: "Succeed in your law school application with Themis",
     hero_sub: "LSAT preparation, CV and personal statement review — personalized guidance to give your application the strongest possible chance.",
     hero_cta_primary: "Book a call",
