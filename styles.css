@@ -1,15 +1,20 @@
 :root {
-  --navy: #1a2a45;
-  --navy-deep: #0f1c30;
-  --gold: #b08d57;
-  --gold-light: #c9a66b;
-  --cream: #f7f4ef;
-  --ink: #22252b;
-  --muted: #5c6470;
-  --line: #e4ddd2;
+  /* Palette derived from the Themis logo (deep burgundy + cream) */
+  --maroon: #661514;
+  --maroon-deep: #490f0e;
+  --maroon-soft: #7d211d;
+  --wine: #93312b;
+  --blush: #e7c9c4;
+  --rose: #b9564e;
+  --cream: #f7f0ea;
+  --cream-deep: #efe4da;
+  --ink: #2a1918;
+  --muted: #6d5754;
+  --line: #e6d7cf;
   --white: #ffffff;
   --radius: 14px;
-  --shadow: 0 10px 30px rgba(15, 28, 48, 0.08);
+  --shadow: 0 10px 30px rgba(74, 15, 14, 0.10);
+  --shadow-lg: 0 18px 40px rgba(74, 15, 14, 0.16);
   --max: 1140px;
 }
 
@@ -27,7 +32,7 @@ body {
 
 h1, h2, h3 {
   font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--navy);
+  color: var(--maroon);
   line-height: 1.15;
   margin: 0 0 0.5em;
 }
@@ -38,8 +43,8 @@ h3 { font-size: 1.4rem; font-weight: 600; }
 
 p { margin: 0 0 1rem; }
 
-a { color: var(--gold); text-decoration: none; }
-a:hover { color: var(--gold-light); }
+a { color: var(--wine); text-decoration: none; }
+a:hover { color: var(--rose); }
 
 .container {
   width: 100%;
@@ -53,7 +58,7 @@ a:hover { color: var(--gold-light); }
   letter-spacing: 0.18em;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--wine);
   margin: 0 0 0.6rem;
 }
 
@@ -62,7 +67,7 @@ a:hover { color: var(--gold-light); }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(247, 240, 234, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
 }
@@ -75,22 +80,28 @@ a:hover { color: var(--gold-light); }
   min-height: 76px;
 }
 
-.logo { display: flex; align-items: center; gap: 0.7rem; color: var(--navy); }
-.logo-mark { font-size: 1.9rem; color: var(--gold); line-height: 1; }
+.logo { display: flex; align-items: center; gap: 0.7rem; color: var(--maroon); }
+.logo-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
 .logo-text { display: flex; flex-direction: column; }
 .logo-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.6rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: var(--navy);
+  color: var(--maroon);
   line-height: 1;
 }
 .logo-tagline { font-size: 0.7rem; color: var(--muted); max-width: 260px; }
 
 .main-nav { display: flex; gap: 1.6rem; }
 .main-nav a {
-  color: var(--navy);
+  color: var(--maroon);
   font-size: 0.95rem;
   font-weight: 500;
   position: relative;
@@ -100,10 +111,10 @@ a:hover { color: var(--gold-light); }
   position: absolute;
   left: 0; bottom: -6px;
   width: 0; height: 2px;
-  background: var(--gold);
+  background: var(--wine);
   transition: width 0.25s ease;
 }
-.main-nav a:hover { color: var(--gold); }
+.main-nav a:hover { color: var(--wine); }
 .main-nav a:hover::after { width: 100%; }
 
 .header-actions { display: flex; align-items: center; gap: 1rem; }
@@ -113,6 +124,7 @@ a:hover { color: var(--gold-light); }
   border: 1px solid var(--line);
   border-radius: 999px;
   overflow: hidden;
+  background: var(--white);
 }
 .lang-btn {
   border: 0;
@@ -124,7 +136,7 @@ a:hover { color: var(--gold-light); }
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
-.lang-btn.is-active { background: var(--navy); color: var(--white); }
+.lang-btn.is-active { background: var(--maroon); color: var(--cream); }
 
 .nav-toggle {
   display: none;
@@ -137,7 +149,7 @@ a:hover { color: var(--gold-light); }
 }
 .nav-toggle span {
   width: 24px; height: 2px;
-  background: var(--navy);
+  background: var(--maroon);
   transition: transform 0.25s, opacity 0.25s;
 }
 
@@ -149,29 +161,40 @@ a:hover { color: var(--gold-light); }
   font-weight: 600;
   font-size: 0.95rem;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
 }
-.btn-primary { background: var(--gold); color: var(--white); }
-.btn-primary:hover { background: var(--gold-light); color: var(--white); transform: translateY(-2px); }
-.btn-ghost { border: 1px solid var(--navy); color: var(--navy); background: transparent; }
-.btn-ghost:hover { background: var(--navy); color: var(--white); }
+.btn-primary { background: var(--wine); color: var(--cream); }
+.btn-primary:hover { background: var(--rose); color: var(--white); transform: translateY(-2px); }
+.btn-ghost { border: 1px solid currentColor; color: var(--maroon); background: transparent; }
+.btn-ghost:hover { background: var(--maroon); color: var(--cream); }
 
 /* Hero */
 .hero {
   background:
-    linear-gradient(160deg, rgba(15,28,48,0.92), rgba(26,42,69,0.85)),
-    radial-gradient(circle at 80% 20%, rgba(176,141,87,0.35), transparent 55%);
-  color: var(--white);
-  padding: clamp(4rem, 10vw, 7rem) 0;
+    radial-gradient(circle at 78% 18%, rgba(185, 86, 78, 0.30), transparent 55%),
+    linear-gradient(160deg, var(--maroon) 0%, var(--maroon-deep) 100%);
+  color: var(--cream);
+  padding: clamp(3.5rem, 9vw, 6rem) 0;
+  text-align: center;
 }
-.hero h1 { color: var(--white); }
-.hero .eyebrow { color: var(--gold-light); }
+.hero-inner { display: flex; flex-direction: column; align-items: center; }
+.hero-emblem {
+  width: clamp(140px, 22vw, 200px);
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+.hero h1 { color: var(--cream); max-width: 16ch; }
+.hero .eyebrow { color: var(--blush); }
 .hero-sub {
   max-width: 620px;
   font-size: 1.1rem;
-  color: rgba(255,255,255,0.85);
+  color: rgba(247, 240, 234, 0.85);
 }
-.hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; justify-content: center; }
+.hero .btn-ghost { color: var(--cream); }
+.hero .btn-ghost:hover { background: var(--cream); color: var(--maroon); }
 
 /* Sections */
 .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
@@ -190,7 +213,7 @@ a:hover { color: var(--gold-light); }
 .about-media img {
   width: 100%;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
 }
 .about-points { list-style: none; padding: 0; margin: 1.2rem 0 0; }
 .about-points li {
@@ -203,7 +226,7 @@ a:hover { color: var(--gold-light); }
   content: "\2713";
   position: absolute;
   left: 0;
-  color: var(--gold);
+  color: var(--wine);
   font-weight: 700;
 }
 
@@ -222,7 +245,7 @@ a:hover { color: var(--gold-light); }
   box-shadow: var(--shadow);
   transition: transform 0.25s, box-shadow 0.25s;
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(15,28,48,0.12); }
+.card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
 .card-icon { font-size: 2.2rem; display: block; margin-bottom: 0.8rem; }
 .card p { color: var(--muted); margin: 0; }
 
@@ -243,16 +266,16 @@ a:hover { color: var(--gold-light); }
   flex-direction: column;
   transition: transform 0.25s, box-shadow 0.25s;
 }
-.price-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(15,28,48,0.12); }
-.price-card--free { border-color: var(--gold); }
-.price-card--featured { border-color: var(--navy); }
+.price-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.price-card--free { border-color: var(--rose); }
+.price-card--featured { border-color: var(--maroon); }
 
 .price-badge {
   position: absolute;
   top: -0.8rem;
   left: 1.7rem;
-  background: var(--gold);
-  color: var(--white);
+  background: var(--wine);
+  color: var(--cream);
   font-size: 0.72rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -260,14 +283,14 @@ a:hover { color: var(--gold-light); }
   padding: 0.3rem 0.7rem;
   border-radius: 999px;
 }
-.price-badge--popular { background: var(--navy); }
-.price-badge--best { background: var(--navy-deep); }
+.price-badge--popular { background: var(--maroon); }
+.price-badge--best { background: var(--maroon-deep); }
 
 .price-amount {
   font-family: "Cormorant Garamond", serif;
   font-size: 2.4rem;
   font-weight: 700;
-  color: var(--navy);
+  color: var(--maroon);
   margin: 0.6rem 0 0.8rem;
 }
 .price-unit { font-size: 1rem; color: var(--muted); font-family: "Inter", sans-serif; font-weight: 400; }
@@ -300,8 +323,8 @@ a:hover { color: var(--gold-light); }
 
 /* Footer */
 .site-footer {
-  background: var(--navy-deep);
-  color: rgba(255,255,255,0.8);
+  background: var(--maroon-deep);
+  color: rgba(247, 240, 234, 0.8);
   padding: 3rem 0 1.5rem;
 }
 .footer-inner {
@@ -309,21 +332,22 @@ a:hover { color: var(--gold-light); }
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 2rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(255,255,255,0.12);
+  border-bottom: 1px solid rgba(247, 240, 234, 0.14);
 }
-.footer-brand .logo-name { color: var(--white); font-size: 1.5rem; }
-.footer-brand p { color: rgba(255,255,255,0.6); margin-top: 0.4rem; }
+.footer-brand .logo-name { color: var(--cream); font-size: 1.5rem; }
+.footer-brand p { color: rgba(247, 240, 234, 0.6); margin-top: 0.4rem; }
 .footer-contact p, .footer-nav a { display: block; }
 .footer-contact p:first-child {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.75rem;
-  color: var(--gold-light);
+  color: var(--blush);
   margin-bottom: 0.4rem;
 }
-.footer-nav a { color: rgba(255,255,255,0.8); margin-bottom: 0.4rem; }
-.footer-nav a:hover { color: var(--gold-light); }
-.footer-bottom { padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: rgba(255,255,255,0.5); }
+.footer-contact a { color: rgba(247, 240, 234, 0.85); }
+.footer-contact a:hover, .footer-nav a:hover { color: var(--blush); }
+.footer-nav a { color: rgba(247, 240, 234, 0.8); margin-bottom: 0.4rem; }
+.footer-bottom { padding-top: 1.5rem; text-align: center; font-size: 0.85rem; color: rgba(247, 240, 234, 0.5); }
 
 /* Responsive */
 @media (max-width: 900px) {
@@ -340,7 +364,7 @@ a:hover { color: var(--gold-light); }
     left: 0; right: 0;
     flex-direction: column;
     gap: 0;
-    background: var(--white);
+    background: var(--cream);
     border-bottom: 1px solid var(--line);
     max-height: 0;
     overflow: hidden;
