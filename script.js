@@ -19,9 +19,6 @@ const translations = {
     about_title: "Un accompagnement dédié à votre réussite",
     about_p1: "Themis a été fondé par deux étudiant·e·s en droit de l'Université McGill avec une mission simple : rendre le parcours vers les études de droit plus accessible. Nous offrons du tutorat LSAT abordable ainsi qu'un accompagnement pour les demandes d'admission en droit, incluant la révision de CV et de personal statement, afin d'aider les futur·e·s étudiant·e·s en droit à naviguer le processus d'admission.",
     about_p2: "En tant qu'étudiant·e·s en droit de première génération, nous comprenons les défis que représente la poursuite d'études en droit sans accès à des services de consultation en admission coûteux, et nous nous engageons à offrir un accompagnement de grande qualité et abordable à celles et ceux qui en ont le plus besoin.",
-    about_point1: "Préparation LSAT structurée et stratégique",
-    about_point2: "Révision approfondie du personal statement",
-    about_point3: "Optimisation du CV et du dossier",
 
     services_eyebrow: "Services",
     services_title: "Nos services",
@@ -82,9 +79,6 @@ const translations = {
     about_title: "Guidance dedicated to your success",
     about_p1: "Themis was founded by two McGill law students with a simple mission: to make the path to law school more accessible. We offer affordable LSAT tutoring and law school application support, including CV and personal statement reviews, to help aspiring law students navigate the admissions process.",
     about_p2: "As first-generation law students ourselves, we understand the challenges of pursuing law without access to expensive admissions consulting, and we're committed to providing high-quality, cost-effective guidance to those who need it most.",
-    about_point1: "Structured, strategic LSAT preparation",
-    about_point2: "In-depth personal statement review",
-    about_point3: "CV and application file optimization",
 
     services_eyebrow: "Services",
     services_title: "Our services",
