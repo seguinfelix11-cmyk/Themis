@@ -280,6 +280,18 @@ a:hover { color: var(--gold-light); }
   overflow: hidden;
   background: var(--white);
 }
+.calendly-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.calendly-placeholder-msg { color: var(--muted); margin: 0; max-width: 420px; }
 .booking-fallback {
   text-align: center;
   margin-top: 2rem;

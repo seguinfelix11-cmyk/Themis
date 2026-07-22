@@ -167,12 +167,17 @@
           Calendly integration:
           Replace CALENDLY_PLACEHOLDER below with your real Calendly link,
           e.g. https://calendly.com/your-username/consultation
+          The widget only loads once a real https:// URL is set; until then a
+          placeholder message is shown (see script.js).
         -->
         <div
-          class="calendly-inline-widget"
-          data-url="CALENDLY_PLACEHOLDER"
-          style="min-width:320px;height:660px;"
-        ></div>
+          id="calendly-widget"
+          class="calendly-placeholder"
+          data-calendly-url="CALENDLY_PLACEHOLDER"
+          style="min-width:320px;"
+        >
+          <p class="calendly-placeholder-msg" data-i18n="booking_placeholder">Le calendrier en ligne sera bientôt disponible.</p>
+        </div>
 
         <div class="booking-fallback">
           <p data-i18n="booking_fallback">Le calendrier ne s'affiche pas ? Écrivez-nous directement :</p>

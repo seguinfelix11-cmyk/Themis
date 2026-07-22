@@ -57,6 +57,7 @@ const translations = {
     booking_eyebrow: "Rendez-vous",
     booking_title: "Prendre rendez-vous",
     booking_lead: "Réservez votre créneau directement en ligne via Calendly.",
+    booking_placeholder: "Le calendrier en ligne sera bientôt disponible. En attendant, écrivez-nous par courriel.",
     booking_fallback: "Le calendrier ne s'affiche pas ? Écrivez-nous directement :",
 
     footer_tagline: "Préparation LSAT et révision dossier d'admission",
@@ -119,6 +120,7 @@ const translations = {
     booking_eyebrow: "Booking",
     booking_title: "Book an appointment",
     booking_lead: "Reserve your slot online directly through Calendly.",
+    booking_placeholder: "Online booking is coming soon. In the meantime, reach out by email.",
     booking_fallback: "Calendar not showing? Email us directly:",
 
     footer_tagline: "LSAT prep and application review",
@@ -174,5 +176,33 @@ document.addEventListener("DOMContentLoaded", () => {
         toggle.setAttribute("aria-expanded", "false");
       });
     });
+  }
+
+  // Calendly: only load the widget when a real https:// URL is configured,
+  // otherwise keep the placeholder message (avoids rendering a 404 iframe).
+  const cal = document.getElementById("calendly-widget");
+  if (cal) {
+    const url = cal.getAttribute("data-calendly-url");
+    const isReal = url && url !== "CALENDLY_PLACEHOLDER" && /^https:\/\//.test(url);
+    if (isReal) {
+      cal.classList.remove("calendly-placeholder");
+      cal.classList.add("calendly-inline-widget");
+      cal.setAttribute("data-url", url);
+      cal.style.height = "660px";
+      cal.textContent = "";
+      const init = () => {
+        if (window.Calendly && typeof window.Calendly.initInlineWidget === "function") {
+          window.Calendly.initInlineWidget({ url, parentElement: cal });
+          return true;
+        }
+        return false;
+      };
+      if (!init()) {
+        let tries = 0;
+        const timer = setInterval(() => {
+          if (init() || ++tries > 40) clearInterval(timer);
+        }, 250);
+      }
+    }
   }
 });
