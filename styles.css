@@ -312,7 +312,8 @@ a:hover { color: var(--rose); }
 }
 .footer-brand .logo-name { color: var(--cream); font-size: 1.5rem; }
 .footer-brand p { color: rgba(247, 240, 234, 0.6); margin-top: 0.4rem; }
-.footer-contact p, .footer-nav a { display: block; }
+.footer-contact p, .footer-contact a, .footer-nav a { display: block; }
+.footer-contact a { margin-bottom: 0.3rem; }
 .footer-contact p:first-child {
   text-transform: uppercase;
   letter-spacing: 0.1em;
